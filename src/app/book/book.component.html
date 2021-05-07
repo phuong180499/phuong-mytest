@@ -1,0 +1,36 @@
+<!--property binding-->
+<h1>Hello {{title}}!</h1>
+<img [src]="image"/>
+<input type="text" [value]="welcometext"/>
+
+<h3 [class.redColor]="applyClass">Apply class</h3> <!--binding class-->
+<h4 [style.color]="applyStyle? 'blue':'orange'">Apply style</h4> <!--binding style-->
+
+<!--Even Binding-->
+<button (click)="OnClick(name.value)">Click me</button> <!--binding sự kiện /(mouseover)/ name.value=$event-->
+<input type="text" #name />
+<br>
+<!--Two way binding:2 chiều giữa view & model-->
+<input type="text" [(ngModel)] = "fname" />
+<input type="text" [(ngModel)] = "lname" />
+<br>
+Full name: {{fname}} {{lname}}
+<br>
+
+<!--Stuctural Directives-->
+<h3 *ngIf="showLineIf">Ẩn hiện ngIf</h3>
+<div [ngSwitch]="color"> <!--Lựa chọn-->
+    <p *ngSwitchCase="'red'">Đây là màu đỏ</p>
+    <p *ngSwitchCase="'blue'">Đây là màu xanh</p>
+    <p *ngSwitchDefault>Invalid color</p>
+</div>
+
+<ul>
+    <li *ngFor="let color of colors">{{color}}</li>  <!--lặp-->
+</ul>
+
+<!--Attribute Directives-->
+<p [ngClass]="{classOne:cone, classTwo:ctwo}">This ngClass apply style</p>
+<button (click)="toggle()">Toggle</button> <!--tráo đổi cho nhau-->
+
+

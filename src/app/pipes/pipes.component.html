@@ -1,0 +1,13 @@
+<h1>{{title | uppercase}}!</h1> 
+<h2>{{title | lowercase}}!</h2>
+<p>Date today: {{today}}</p>
+<!-- <p>Date today: {{today | date:'fullDate'}}</p> -->
+<p>Percent: {{percentNumber | percent}}</p> <!--phần trăm-->
+<pre>{{object | json}}</pre>  <!--chuyển từ object sang string-->
+
+<!-- <p>2 power 10: {{ 2 | exponentialStrength:10 }}</p> -->
+
+<ul>
+    <li *ngFor="let i of collection | slice:1:3">{{i}}</li> <!--mảng lặp 1-3-->
+</ul>
+

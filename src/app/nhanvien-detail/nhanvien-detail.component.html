@@ -1,0 +1,24 @@
+<table *ngIf="nhanvien">
+    <tr>
+        <td>Id</td>
+        <td>{{nhanvien.id}}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{nhanvien.name}}</td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>{{nhanvien.age}}</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>{{nhanvien.status}}</td>
+    </tr>
+</table>
+<a class="btn btn-primary" [routerLink]="['/overview']">overview</a>
+<a class="btn btn-primary" [routerLink]="['/projects']">Project</a>
+
+<a class="btn btn-default" [routerLink]="['/nhanviens']">Trở về</a>
+
+<router-outlet></router-outlet>

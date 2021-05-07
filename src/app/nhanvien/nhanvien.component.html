@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-10">
+      <input type="text" [(ngModel)]="keyword" name="keyword" />
+      <button (click)="Search()">Tìm kiếm</button>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+    <a [routerLink]="['/nhanvien-add']" class="btn btn-success">Add new</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Status</td>
+            <td>Created At</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let nhanvien of nhanviens">
+            <td>{{nhanvien.name}}</td>
+            <td>{{nhanvien.age}}</td>
+            <td>{{nhanvien.status}}</td>
+            <td>{{nhanvien.createdAt |date }}</td>
+            <td>
+                <a [routerLink]="['/nhanvien-detail',nhanvien.id]">Show Detail </a>
+                <a [routerLink]="['/nhanvien-edit',nhanvien.id]" class="btn btn-primary">Edit </a>
+                <button (click)="Delete(nhanvien.id)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="pagination modal-1">
+    <li><a href="#" class="prev">&laquo;</a></li>
+    <li *ngFor="let page of pages"><a [routerLink]="['/nhanviens']" [queryParams]="{pageNumber:page}" href="#" class="active">{{page}}</a></li>
+    <li><a href="#" class="next">&raquo;</a></li>
+ </ul>

@@ -1,0 +1,57 @@
+
+<!-- <app-dangnhap></app-dangnhap> -->
+<!-- <app-book></app-book> -->
+<!-- <app-pipes></app-pipes> -->
+<!-- <app-user-form></app-user-form> -->
+<!-- <app-nhanvien></app-nhanvien> -->
+
+<!--BAI13-->
+<!-- <input type="text" #textName (keyup)="0" /> update win khi có sự kiện keyup-->
+<!-- <p>Đồng ý: {{agree}}. Không đồng ý: {{disgree}}</p> in ra số lượng vote
+<button (click)="changeName()">Đổi tên</button>
+<app-word *ngFor="let person of names" [name]="person" (onVote)="parentVote($event)"></app-word> vote -->
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link"routerLink="" routerLinkActive="active">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="nhanviens" routerLinkActive="active">Nhân Viên</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" (click)="Logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>

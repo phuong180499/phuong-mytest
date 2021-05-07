@@ -1,0 +1,13 @@
+<!-- <h4>Welcom to word </h4>
+<h3 [hidden]="forgot">{{ en }}</h3>
+<p>{{ vn }}</p>
+<img [src]="imageUrl" alt=""> 
+<button (click)="toggleForgot()">Toggel forgot</button> nút ẩn hiện -->
+
+<p>Child component: {{name}}</p> <!--Input-->
+
+<!--sự kiện vote-->
+<button [disabled] = "voted" (click)="vote(true)">Đồng ý</button>
+<button [disabled] = "voted" (click)="vote(false)">Không đồng ý</button>
+ Result: {{voted}}
+<router-outlet></router-outlet>

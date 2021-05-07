@@ -1,0 +1,30 @@
+<div class="login">
+<body>
+
+    <div class="loginbox">
+        <form (ngSubmit)="onSubmit(formSignIn);" #formSignIn="ngForm">
+            <input [ngClass]="txtEmail.touched && txtEmail.errors?.required == true ? 'maudo': 'mauxanh'" 
+            type="text" placeholder="Email hoặc số điện thoại" ngModel #txtEmail="ngModel" name="email" required email>
+            <p *ngIf="txtEmail.touched && txtEmail.errors?.required"> <!--kiểm tra email bị trống-->
+                Bạn chưa nhập email!
+            </p>
+            <p *ngIf="txtEmail.touched && txtEmail.errors?.email"> <!--kiểm tra email không hợp lệ-->
+                Email không hợp lệ!
+            </p>
+            <input [ngClass]="txtPassword.touched && txtPassword.errors?.required ==true ? 'maudo': 'mauxanh'" 
+             type="password" placeholder="Mật khẩu" ngModel #txtPassword="ngModel" name="password" required>
+            <p *ngIf="txtPassword.touched && txtPassword.errors?.required">
+                Nhập password!
+            </p>
+            <!-- <p *ngIf="txtPassword.touched && txtPassword.errors?.password">
+                Password không hợp lệ!
+            </p> -->
+            <input type="submit" name="" value="Đăng nhập" [disabled]="formSignIn.invalid">
+            <a href="">Quên mật khẩu?</a>
+            <div class="bottom"><input type="submit" name="" value="Tạo tài khoản mới"></div>
+        </form>
+        <!-- <p>{{ txtEmail.errors | json }}</p> hiển thị lỗi moi -->
+    </div>
+
+</body>
+</div>

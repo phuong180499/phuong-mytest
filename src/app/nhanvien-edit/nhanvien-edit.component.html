@@ -1,0 +1,19 @@
+<form class="form" #f="ngForm" (ngSubmit)="SaveForm()" *ngIf="nhanvien">
+    <div class="form-group">
+        <label class="col-md-2">Name</label>
+        <div class="col-md-10"><input type="text" name="name" [(ngModel)]="nhanvien.name" /></div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Age</label>
+        <div class="col-md-10"><input type="number" name="age" [(ngModel)]="nhanvien.age" /></div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">Status</label>
+        <div class="col-md-10"><input type="checkbox" name="status" [(ngModel)]="nhanvien.status" /></div>
+    </div>
+    <div class="form-group">
+        <button type="submit" >Save</button>
+        <button type="button" (click)="GotoNhanvien()">Cancel</button>
+    </div>
+</form>
+<router-outlet></router-outlet>

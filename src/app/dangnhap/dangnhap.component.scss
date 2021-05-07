@@ -1,0 +1,90 @@
+
+.login{
+    margin: auto;
+    margin-top: 160px;
+    padding: 0;
+    background: honeydew;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    width: 500px;
+    height: 500px;
+    
+}
+.loginbox{
+    width: 450px;
+    height: auto;
+    background: honeydew;
+    color: rgb(255, 255, 255);
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    
+}
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+// .loginbox input[type="text"], input[type="password"]{
+
+//     border-style: solid;
+//     width: 440px;
+//     height: 60px;
+//     border-radius: 15px;   
+//     background-color: white;  
+//     border: 2px solid #008CBA;
+//     text-align: left;
+// }
+.loginbox input[type="submit"]{
+    height: 60px;
+    background-color: rgb(9, 48, 223);
+    font-size: 25px;
+    border-radius: 15px;
+    color: white;
+}
+.button{
+    height: 60px;
+    background-color: rgb(9, 48, 223);
+    font-size: 25px;
+    border-radius: 15px;
+    color: white;
+}
+.loginbox a{
+    color: rgb(14, 47, 236);
+    margin-left: 160px;
+}
+.bottom input[type="submit"]{
+    width: 210px;
+    margin-top: 50px;
+    margin-left: 120px;
+    font-size: 20px;
+}
+.loginbox p{
+    color: brown;
+}
+// input.ng-invalid.ng-touched{
+//     border: 2px solid red;
+// }
+.maudo
+{
+    border: 2px solid red;
+    border-style: solid;
+    width: 440px;
+    height: 60px;
+    border-radius: 15px;   
+    background-color: white;  
+    text-align: left;
+}
+.mauxanh
+{
+    border-style: solid;
+    width: 440px;
+    height: 60px;
+    border-radius: 15px;   
+    background-color: white;  
+    border: 2px solid #008CBA;
+    text-align: left;
+}
